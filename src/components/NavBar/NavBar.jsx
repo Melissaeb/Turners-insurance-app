@@ -1,12 +1,16 @@
-import LogoMenu from "./LogoMenu";
 import styles from "./NavBar.module.css";
-import TopMenu from "./TopMenu";
+
+// importing components
+import TopMenu from "./components/TopMenu";
+import LogoMenu from "./components/LogoMenu";
+import BlueMenu from "./components/BlueMenu";
 
 export default function NavBar() {
   return (
     <div className={styles.navBarContainer}>
       <TopMenu />
       <LogoMenu />
+      <BlueMenu />
     </div>
   );
 }

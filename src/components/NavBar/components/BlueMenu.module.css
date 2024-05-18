@@ -1,0 +1,67 @@
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #0073cf;
+}
+
+.menu {
+  flex: 0 1 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 0 20px;
+}
+
+.menuItem {
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 13px 10px;
+  position: relative;
+}
+
+.searchIcon {
+  width: 12px;
+  margin: 9px 6px 6px 0;
+}
+
+.findCarLink {
+  text-decoration: none;
+  color: #fff;
+}
+
+.downIcon {
+  margin-top: 2px;
+  width: 25px;
+}
+
+.menuItem:hover {
+  background-color: #004a86;
+}
+
+.menuItem:hover ul {
+  display: flex;
+}
+
+.menuItem:hover img {
+  content: url("../../../assets/up-arrow.svg");
+  width: 25px;
+}
+
+.menuItem:first-child:hover img {
+  content: url("../../../assets/search.svg");
+  width: 12px;
+}
+
+.menuItem:last-child ul {
+  left: -149px;
+}
+
+.menuItem:nth-last-child(2) ul {
+  left: -190px;
+}

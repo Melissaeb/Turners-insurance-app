@@ -1,0 +1,31 @@
+.menu {
+  position: absolute;
+  background-color: #fff;
+  top: 53px;
+  left: 0;
+  z-index: 2;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  width: 300px;
+  display: none;
+}
+
+.listItem {
+  text-align: left;
+  padding: 10px;
+  font-size: 14px;
+  border-bottom: 1px solid #efefef;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: normal;
+  color: #0073cf;
+}
+
+.link:hover {
+  color: #b71234;
+}

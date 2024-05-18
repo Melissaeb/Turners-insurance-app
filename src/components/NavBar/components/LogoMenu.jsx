@@ -1,9 +1,9 @@
 import styles from "./LogoMenu.module.css";
 
 import turnersCarLogo from "/turnerscars-logo.png";
-import personIcon from "../../assets/person.svg";
-import phoneIcon from "../../assets/phone.svg";
-import locationIcon from "../../assets/location.svg";
+import personIcon from "../../../assets/person.svg";
+import phoneIcon from "../../../assets/phone.svg";
+import locationIcon from "../../../assets/location.svg";
 
 export default function LogoMenu() {
   return (

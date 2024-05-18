@@ -1,0 +1,33 @@
+.headerTopMenu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.listItemTopMenu {
+  padding: 8px 0 10px 10px;
+}
+
+.topMenuAnchor {
+  border-right: solid #ccc 1px;
+  font-size: 13px;
+  padding: 0 10px 0 0;
+  color: #0073cf;
+  text-decoration: none;
+}
+
+.listItemTopMenu:last-child > a {
+  border-right: none;
+}
+
+/* Hard-coded styling could be changed if using params */
+
+.listItemTopMenu:first-child > a {
+  color: #000;
+  border-right: none;
+}
+
+.topMenuAnchorActive {
+  background-color: #eee;
+  border-top: 2px solid #0073cf;
+}

@@ -21,7 +21,6 @@
 }
 
 /* Hard-coded styling could be changed if using params */
-
 .listItemTopMenu:first-child > a {
   color: #000;
   border-right: none;

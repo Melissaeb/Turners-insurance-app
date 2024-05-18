@@ -1,0 +1,57 @@
+.logoMenuBar {
+  display: flex;
+  justify-content: center;
+}
+
+.logoMenuBarChildren {
+  flex: 0 1 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.personIcon,
+.phoneIcon,
+.locationIcon {
+  height: 14px;
+  margin-right: 6px;
+}
+
+.menuLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000;
+}
+
+.loginLink {
+  color: #0073cf;
+}
+
+.or {
+  margin: 0px 3px;
+  font-weight: normal;
+  font-style: italic;
+  color: #666;
+}
+
+.chineseLink {
+  color: #b71234;
+}
+
+.menuItem:hover a,
+.menuItem:hover img svg g path,
+.menuItem:hover img svg g {
+  /* Changes colours to black before filtering colours to #b71234 using filter converter https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: brightness(0) saturate(100%) invert(14%) sepia(75%) saturate(3584%)
+    hue-rotate(335deg) brightness(97%) contrast(102%);
+}

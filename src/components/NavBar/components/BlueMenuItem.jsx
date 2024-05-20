@@ -4,12 +4,9 @@ import styles from "./BlueMenu.module.css";
 import downIcon from "../../../assets/down-arrow.svg";
 
 export default function BlueMenuItem(props) {
-  const toggleMenu = (e) => {
-    console.log(e);
-  };
 
   return (
-    <li className={styles.menuItem} onClick={toggleMenu}>
+    <li className={styles.menuItem}>
       {props.name}
       <img
         src={downIcon}

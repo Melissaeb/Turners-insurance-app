@@ -1,0 +1,59 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  flex: 0 1 1200px;
+  display: flex;
+  margin: 50px 50px 50px 70px;
+}
+
+.writing {
+  padding-right: px;
+}
+
+.title {
+  margin-bottom: 15px;
+  font-size: 45px;
+}
+
+.subtitle {
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.description {
+  margin-bottom: 40px;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+
+.fileInput {
+  flex: 0 1 165px;
+}
+
+.submitBtn {
+  margin-bottom: 25px;
+}
+
+.resultTitle {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.vehicleImage {
+  min-width: 580px;
+  padding: 0 20px 0 30px;
+  align-self: flex-start;
+}
+
+.noFile {
+  color: transparent;
+}

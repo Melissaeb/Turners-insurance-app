@@ -8,7 +8,6 @@ export default function VehicleRecognition() {
   const [imageSrc, setImageSrc] = useState("");
   const [tag, setTag] = useState("");
   const [error, setError] = useState("");
-  const [buttonText, setButtonText] = useState("Analyse");
   const [bodyStyle, setBodyStyle] = useState("");
 
   const vehicleBodyStyles = [
@@ -27,13 +26,10 @@ export default function VehicleRecognition() {
   useEffect(() => {
     if (imageUrl) {
       setImageSrc(imageUrl);
-      setButtonText("Analyse from URL");
     } else if (imageFile) {
       setImageSrc(URL.createObjectURL(imageFile));
-      setButtonText("Analyse Uploaded Image");
     } else {
       setImageSrc("src/assets/jimny.png");
-      setButtonText("Analyse");
     }
   }, [imageUrl, imageFile]);
 
@@ -78,9 +74,7 @@ export default function VehicleRecognition() {
       );
 
       if (bestTag.name) {
-        setTag(
-          `It looks like you're looking for a ${bestTag.name}. If not, please share another image of the vehicle you're looking for.`
-        );
+        setTag(`Looking for something else? Please share another image.`);
         setBodyStyle(bestTag.name);
       } else {
         setTag("No vehicle body style detected. Please share another image.");
@@ -120,44 +114,40 @@ export default function VehicleRecognition() {
 
           <p className={styles.description}>
             Welcome to AutoDetect! Snap a photo or provide a vehicle URL, and
-            our cutting-edge technology will analyse it for you! Receive
+            our cutting-edge technology will analyse it for you. Receive
             personalized insurance quotes based on similar vehicles in our
             database. Get started now to ensure you're covered with the best
             rates for your ride!
           </p>
 
           <form className={styles.imageForm}>
-            <div className={styles.inputs}>
-              <input
-                type="text"
-                placeholder="Enter image URL"
-                value={imageUrl}
-                onChange={handleUrlChange}
-                className={styles.urlInput}
-              />
-              <p className={styles.or}>or</p>
-              <input
-                type="file"
-                onChange={handleFileChange}
-                className={`${styles.fileInput} ${
-                  !imageFile ? styles.noFile : ""
-                }`}
-              />
-            </div>
+            <input
+              type="text"
+              placeholder="Enter image URL"
+              value={imageUrl}
+              onChange={handleUrlChange}
+              className={styles.urlInput}
+            />
+            <p className={styles.or}>or</p>
+            <input
+              type="file"
+              onChange={handleFileChange}
+              className={`${styles.fileInput} ${
+                !imageFile ? styles.noFile : ""
+              }`}
+            />
             <button
               onClick={handleAnalyse}
               type="submit"
               className={styles.submitBtn}
             >
-              {buttonText}
+              ANALYSE
             </button>
           </form>
 
           {tag && (
             <div>
-              <h2 className={styles.resultTitle}>
-                AutoDetect Result: {bodyStyle}
-              </h2>
+              <h2 className={styles.resultTitle}>Result: {bodyStyle}</h2>
               <p className={styles.result}>{tag}</p>
             </div>
           )}

@@ -3,6 +3,9 @@
   justify-content: center;
   background-color: #0073cf;
   box-shadow: 0 2px 15px 2px rgba(0, 0, 0, 0.3);
+  /* position: sticky is not working?? */
+  position: sticky;
+  top: 50px;
 }
 
 .menu {

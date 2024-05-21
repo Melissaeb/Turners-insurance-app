@@ -41,10 +41,6 @@ export default function BlueMenu() {
         </li>
 
         {listItems.map((item, index) => (
-          // <BlueMenuItem key={index} name={item.name}>
-          //   {<item.component />}
-          // </BlueMenuItem>
-
           <li className={styles.menuItem} key={index}>
             {item.name}
             <img

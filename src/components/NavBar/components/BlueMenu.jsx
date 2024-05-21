@@ -2,6 +2,7 @@ import styles from "./BlueMenu.module.css";
 
 // Icon imports
 import searchIcon from "../../../assets/search.svg";
+import downIcon from "../../../assets/down-arrow.svg";
 
 // Component imports
 import HowToBuy from "./dropdownMenus/HowToBuy";
@@ -11,6 +12,15 @@ import TurnersSubscription from "./dropdownMenus/TurnersSubscription";
 import Auctions from "./dropdownMenus/Auctions";
 import ServicesAndInfo from "./dropdownMenus/ServicesAndInfo";
 import BlueMenuItem from "./BlueMenuItem";
+
+const listItems = [
+  { name: "How to Buy", component: HowToBuy },
+  { name: "Sell your Car", component: SellYourCar },
+  { name: "Finance & Insurance", component: FinanceAndInsurance },
+  { name: "Turners Subscription", component: TurnersSubscription },
+  { name: "Auctions", component: Auctions },
+  { name: "Services & Info", component: ServicesAndInfo },
+];
 
 export default function BlueMenu() {
   return (
@@ -30,29 +40,21 @@ export default function BlueMenu() {
           </a>
         </li>
 
-        <BlueMenuItem name="How to Buy">
-          <HowToBuy />
-        </BlueMenuItem>
+        {listItems.map((item, index) => (
+          // <BlueMenuItem key={index} name={item.name}>
+          //   {<item.component />}
+          // </BlueMenuItem>
 
-        <BlueMenuItem name="Sell your Car">
-          <SellYourCar />
-        </BlueMenuItem>
-
-        <BlueMenuItem name="Finance & Insurance">
-          <FinanceAndInsurance />
-        </BlueMenuItem>
-
-        <BlueMenuItem name="Turners Subscription">
-          <TurnersSubscription />
-        </BlueMenuItem>
-
-        <BlueMenuItem name="Auctions">
-          <Auctions />
-        </BlueMenuItem>
-
-        <BlueMenuItem name="Services & Info">
-          <ServicesAndInfo />
-        </BlueMenuItem>
+          <li className={styles.menuItem} key={index}>
+            {item.name}
+            <img
+              src={downIcon}
+              alt="Downward arrow icon"
+              className={styles.downIcon}
+            />
+            {<item.component />}
+          </li>
+        ))}
       </ul>
     </div>
   );

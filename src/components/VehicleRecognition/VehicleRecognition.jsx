@@ -77,6 +77,7 @@ export default function VehicleRecognition() {
         setTag(`Looking for something else? Please share another image.`);
         setBodyStyle(bestTag.name);
       } else {
+        setBodyStyle("Not found");
         setTag("No vehicle body style detected. Please share another image.");
       }
 

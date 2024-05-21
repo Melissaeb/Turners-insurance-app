@@ -7,8 +7,8 @@
 .lists {
   flex: 0 1 1200px;
   max-width: 100vw;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid: auto / 1fr 1fr 1fr 1fr;
   color: #fff;
   padding: 40px 60px;
 }
@@ -21,16 +21,14 @@
 
 .listItem {
   list-style: none;
+  margin-bottom: 5px;
+  line-height: 20px;
 }
 
-.anchorLink,
-.anchorLink:visited,
-.anchorLink:active {
+.anchorLink {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 7px;
   cursor: pointer;
   transition: 0.8s;
 }

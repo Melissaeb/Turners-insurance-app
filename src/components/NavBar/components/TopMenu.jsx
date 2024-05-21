@@ -1,5 +1,7 @@
 import styles from "./TopMenu.module.css";
 
+const pages = [{}];
+
 export default function TopMenu() {
   return (
     <ul className={styles.headerTopMenu}>

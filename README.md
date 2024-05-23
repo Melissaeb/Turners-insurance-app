@@ -114,14 +114,6 @@ Project Link: [https://github.com/Melissaeb/Turners-insurance-app](https://githu
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- [Deploying with Azure](https://stackoverflow.com/questions/77925590/deploy-vite-react-app-on-azure-webapp-service-or-any-alternative#:~:text=to%20deploy%20to%20Azure%20run,will%20create%20a%20dist%20folder.&text=Create%20a%20static%20web%20app,set%20app%20location%20to%20%2Fdist%20.)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 

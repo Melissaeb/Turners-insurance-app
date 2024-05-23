@@ -26,7 +26,6 @@ export default function VehicleRecognition() {
   ];
 
   const apiHost = import.meta.env.VITE_API_HOST;
-  console.log(apiHost);
 
   useEffect(() => {
     if (imageUrl) {
@@ -64,7 +63,6 @@ export default function VehicleRecognition() {
 
       const tags = response.data.tags;
 
-      console.log(response.data.tags);
       const vehicleTags = tags.filter((tag) =>
         vehicleBodyStyles.includes(tag.name.toLowerCase())
       );

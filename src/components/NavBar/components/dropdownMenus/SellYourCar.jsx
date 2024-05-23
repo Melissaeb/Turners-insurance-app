@@ -1,6 +1,4 @@
 import styles from "./DropdownMenu.module.css";
-import ListItem from "./ListItem";
-
 const pages = [
   {
     href: "https://www.turners.co.nz/Cars/sell-your-car/",

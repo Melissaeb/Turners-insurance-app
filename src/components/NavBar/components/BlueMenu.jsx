@@ -11,7 +11,6 @@ import FinanceAndInsurance from "./dropdownMenus/FinanceAndInsurance";
 import TurnersSubscription from "./dropdownMenus/TurnersSubscription";
 import Auctions from "./dropdownMenus/Auctions";
 import ServicesAndInfo from "./dropdownMenus/ServicesAndInfo";
-import BlueMenuItem from "./BlueMenuItem";
 
 const listItems = [
   { name: "How to Buy", component: HowToBuy },

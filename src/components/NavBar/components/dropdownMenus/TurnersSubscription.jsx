@@ -1,5 +1,4 @@
 import styles from "./DropdownMenu.module.css";
-import ListItem from "./ListItem";
 
 const pages = [
   {

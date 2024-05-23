@@ -24,7 +24,6 @@ export default function VehicleRecognition() {
   ];
 
   const apiHost = import.meta.env.VITE_API_HOST;
-  // const apiHost = "https://vehicle-recognition-server.azurewebsites.net";
   console.log(apiHost);
 
   useEffect(() => {
@@ -49,7 +48,6 @@ export default function VehicleRecognition() {
 
         response = await axios.post(
           `${apiHost}/analyse-upload`,
-          // `https://vehicle-recognition-server.azurewebsites.net/analyse-upload`,
           formData,
           {
             headers: {
@@ -60,7 +58,6 @@ export default function VehicleRecognition() {
       } else if (imageUrl) {
         response = await axios.post(
           `${apiHost}/analyse-url`,
-          // `https://vehicle-recognition-server.azurewebsites.net/analyse-url`,
           {
             imageUrl,
           }

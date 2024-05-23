@@ -23,6 +23,9 @@ export default function VehicleRecognition() {
     "pickup truck",
   ];
 
+  const apiHost = import.meta.env.VITE_API_HOST;
+  // const apiHost = "https://vehicle-recognition-server.azurewebsites.net";
+
   useEffect(() => {
     if (imageUrl) {
       setImageSrc(imageUrl);
@@ -43,17 +46,13 @@ export default function VehicleRecognition() {
         const formData = new FormData();
         formData.append("image", imageFile);
 
-        response = await axios.post(
-          "http://localhost:3001/analyse-upload",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
+        response = await axios.post(`${apiHost}/analyse-upload`, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
       } else if (imageUrl) {
-        response = await axios.post("http://localhost:3001/analyse-url", {
+        response = await axios.post(`${apiHost}/analyse-url`, {
           imageUrl,
         });
       } else {

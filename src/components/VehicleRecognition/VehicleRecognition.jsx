@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./VehicleRecognition.module.css";
 
+import jimny from "/jimny.png";
+
 export default function VehicleRecognition() {
   const [imageUrl, setImageUrl] = useState("");
   const [imageFile, setImageFile] = useState(null);
@@ -32,7 +34,7 @@ export default function VehicleRecognition() {
     } else if (imageFile) {
       setImageSrc(URL.createObjectURL(imageFile));
     } else {
-      setImageSrc("src/assets/jimny.png");
+      setImageSrc(jimny);
     }
   }, [imageUrl, imageFile]);
 
@@ -46,22 +48,15 @@ export default function VehicleRecognition() {
         const formData = new FormData();
         formData.append("image", imageFile);
 
-        response = await axios.post(
-          `${apiHost}/analyse-upload`,
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
+        response = await axios.post(`${apiHost}/analyse-upload`, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
       } else if (imageUrl) {
-        response = await axios.post(
-          `${apiHost}/analyse-url`,
-          {
-            imageUrl,
-          }
-        );
+        response = await axios.post(`${apiHost}/analyse-url`, {
+          imageUrl,
+        });
       } else {
         setError("Please provide an image URL or upload a file.");
         return;

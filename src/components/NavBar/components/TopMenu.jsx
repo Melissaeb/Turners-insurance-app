@@ -28,8 +28,8 @@ const pages = [
 export default function TopMenu() {
   return (
     <ul className={styles.headerTopMenu}>
-      {pages.map((page) => (
-        <li className={styles.listItemTopMenu}>
+      {pages.map((page, index) => (
+        <li key={index} className={styles.listItemTopMenu}>
           <a href={page.href} className={styles.topMenuAnchor}>
             {page.name}
           </a>

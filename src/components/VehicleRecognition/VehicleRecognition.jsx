@@ -23,8 +23,9 @@ export default function VehicleRecognition() {
     "pickup truck",
   ];
 
-  const apiHost = import.meta.env.VITE_API_HOST;
-  // const apiHost = "https://vehicle-recognition-server.azurewebsites.net";
+  // const apiHost = import.meta.env.VITE_API_HOST;
+  const apiHost = "https://vehicle-recognition-server.azurewebsites.net";
+  console.log(apiHost);
 
   useEffect(() => {
     if (imageUrl) {
@@ -46,15 +47,24 @@ export default function VehicleRecognition() {
         const formData = new FormData();
         formData.append("image", imageFile);
 
-        response = await axios.post(`${apiHost}/analyse-upload`, formData, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        });
+        response = await axios.post(
+          // `${apiHost}/analyse-upload`
+          `https://vehicle-recognition-server.azurewebsites.net/analyse-upload`,
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
       } else if (imageUrl) {
-        response = await axios.post(`${apiHost}/analyse-url`, {
-          imageUrl,
-        });
+        response = await axios.post(
+          // `${apiHost}/analyse-url`
+          `https://vehicle-recognition-server.azurewebsites.net/analyse-url`,
+          {
+            imageUrl,
+          }
+        );
       } else {
         setError("Please provide an image URL or upload a file.");
         return;

@@ -35,7 +35,11 @@ export default function FinanceAndInsurance() {
     <div className={styles.list}>
       <h3 className={styles.heading}>FINANCE & INSURANCE</h3>
       {pages.map((page, index) => (
-        <ListItem key={index} href={page.href} name={page.name} />
+        <li key={index} className={styles.listItem}>
+          <a href={page.href} className={styles.anchorLink}>
+            {page.name}
+          </a>
+        </li>
       ))}
     </div>
   );

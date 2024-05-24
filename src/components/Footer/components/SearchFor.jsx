@@ -38,7 +38,11 @@ export default function SearchFor() {
     <div className={styles.list}>
       <h3 className={styles.heading}>SEARCH FOR</h3>
       {pages.map((page, index) => (
-        <ListItem key={index} href={page.href} name={page.name} />
+        <li key={index} className={styles.listItem}>
+          <a href={page.href} className={styles.anchorLink}>
+            {page.name}
+          </a>
+        </li>
       ))}
     </div>
   );

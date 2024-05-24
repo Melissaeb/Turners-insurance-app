@@ -1,5 +1,4 @@
 import styles from "../Footer.module.css";
-import ListItem from "./ListItem";
 
 const pages = [
   { href: "https://www.turners.co.nz/Cars/Used-Cars-for-Sale/", name: "Cars" },

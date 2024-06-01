@@ -25,7 +25,7 @@ export default function VehicleRecognition() {
     "pickup truck",
   ];
 
-  const apiHost = import.meta.env.VITE_API_HOST;
+  const apiHost = import.meta.env.VITE_REACT_APP_BACKEND_URL;
 
   useEffect(() => {
     if (imageUrl) {

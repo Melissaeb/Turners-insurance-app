@@ -36,3 +36,9 @@
   background-color: #eee;
   border-top: 2px solid #0073cf;
 }
+
+@media screen and (max-width: 1100px) {
+  .headerTopMenu {
+    display: none;
+  }
+}

@@ -69,3 +69,9 @@
 .menuItem:nth-last-child(2) ul {
   left: -190px;
 }
+
+@media screen and (max-width: 1100px) {
+  .menuContainer {
+    display: none;
+  }
+}

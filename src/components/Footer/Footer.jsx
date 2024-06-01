@@ -3,6 +3,7 @@ import AboutUs from "./components/AboutUs";
 import Cars from "./components/Cars";
 import FinanceAndInsurance from "./components/FinanceAndInsurance";
 import SearchFor from "./components/SearchFor";
+import LowerFooter from "./components/LowerFooter";
 
 export default function Footer() {
   return (
@@ -15,6 +16,8 @@ export default function Footer() {
           <AboutUs />
         </div>
       </div>
+
+      <LowerFooter />
     </div>
   );
 }

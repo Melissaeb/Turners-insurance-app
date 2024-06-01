@@ -1,0 +1,99 @@
+.lowerFooter {
+  background-color: #363636;
+  display: flex;
+  justify-content: center;
+}
+
+.sections {
+  display: flex;
+  flex: 0 1 1200px;
+  justify-content: space-between;
+  margin: 10px 40px;
+  align-items: center;
+}
+
+.copyRight {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.socialDetails {
+  display: flex;
+}
+
+.socialListItem {
+  list-style: none;
+  padding: 5px 15px;
+  border-left: 1px solid #444;
+}
+
+.icon {
+  height: 20px;
+  /* Changes colours to black before filtering colours to #b71234 using filter converter https://codepen.io/sosuke/pen/Pjoqqp */
+  filter: invert(14%) sepia(75%) saturate(3584%) hue-rotate(335deg)
+    brightness(97%) contrast(102%);
+}
+
+.socialListItem:first-child img {
+  height: 18px;
+}
+
+.socialListItem:last-child img {
+  height: 22px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.socialLink:hover img {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(79deg)
+    brightness(114%) contrast(101%);
+}
+
+.socialLink:hover span {
+  color: #a9a7a7;
+  transition: 0.8s;
+}
+
+@media screen and (max-width: 1100px) {
+  .lowerFooter {
+    padding: 20px;
+    border-top: 5px solid #9a9b9c;
+  }
+
+  .sections {
+    flex-flow: column-reverse;
+    align-items: center;
+    margin: none;
+  }
+
+  .copyRight {
+    font-size: 12px;
+  }
+
+  .socialDetails {
+    flex-flow: column;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .socialListItem {
+    list-style: none;
+    border-left: none;
+    border-top: 1px solid #444;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .socialLink {
+    justify-content: center;
+    font-size: 16px;
+  }
+}

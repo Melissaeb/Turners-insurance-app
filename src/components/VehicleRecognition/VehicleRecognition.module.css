@@ -67,8 +67,8 @@
 .vehicleImage {
   min-width: 580px;
   max-width: 580px;
-  height: 300px;
-  object-fit: cover;
+  /* height: 300px;
+  object-fit: cover; */
   padding: 0 20px 0 30px;
   align-self: flex-start;
 }

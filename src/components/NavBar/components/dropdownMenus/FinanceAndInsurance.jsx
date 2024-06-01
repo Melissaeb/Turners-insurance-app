@@ -15,11 +15,11 @@ const pages = [
     name: "Apply Online for Business Finance",
   },
   {
-    href: "http://localhost:5173/Cars/finance-insurance/car-insurance/",
+    href: "/Cars/finance-insurance/car-insurance/",
     name: "Car Insurance",
   },
   {
-    href: "http://localhost:5173/Cars/finance-insurance/car-insurance/autodetect",
+    href: "/Cars/finance-insurance/car-insurance/autodetect",
     name: "AutoDetect",
   },
 ];

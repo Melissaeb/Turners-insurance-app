@@ -8,7 +8,7 @@ const pages = [
   },
   { href: "https://www.turners.co.nz/Finance/", name: "Loan Calculator" },
   {
-    href: "https://www.turners.co.nz/Finance/motor-vehicle-insurance/",
+    href: "http://localhost:5173/Cars/finance-insurance/car-insurance/",
     name: "Car Insurance",
   },
   {

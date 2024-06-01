@@ -1,29 +1,25 @@
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
 import VehicleRecognition from "./components/VehicleRecognition/VehicleRecognition";
-import Footer from "./components/Footer/Footer";
 import { Routes, Route, Navigate } from "react-router-dom";
+import CarInsurance from "./components/CarInsurance/CarInsurance";
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
       <Routes>
-        {/* Redirects to AutoDetect Vehicle recognition from / */}
+        {/* Redirects to Car insurance homepage from / */}
         <Route
           path="/"
-          element={
-            <Navigate
-              to={"/Cars/finance-insurance/car-insurance/autodetect/"}
-            />
-          }
+          element={<Navigate to={"/Cars/finance-insurance/car-insurance"} />}
         />
+
         <Route
-          path="/:section/finance-insurance/car-insurance/autodetect/"
-          element={<VehicleRecognition />}
-        />
+          path="/:section/finance-insurance/car-insurance/*"
+          element={<CarInsurance />}
+        >
+          <Route path="autodetect" element={<VehicleRecognition />} />
+        </Route>
       </Routes>
-      <Footer />
     </div>
   );
 }

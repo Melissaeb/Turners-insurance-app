@@ -1,3 +1,4 @@
+import { Link, NavLink } from "react-router-dom";
 import styles from "./DropdownMenu.module.css";
 
 const pages = [
@@ -14,8 +15,12 @@ const pages = [
     name: "Apply Online for Business Finance",
   },
   {
-    href: "https://www.turners.co.nz/Cars/finance-insurance/car-insurance/",
+    href: "http://localhost:5173/Cars/finance-insurance/car-insurance/",
     name: "Car Insurance",
+  },
+  {
+    href: "http://localhost:5173/Cars/finance-insurance/car-insurance/autodetect",
+    name: "AutoDetect",
   },
 ];
 

@@ -26,12 +26,12 @@
 }
 
 /* Hard-coded styling could be changed if using params */
-.listItemTopMenu:first-child > a {
+.activeListItem > a {
   color: #000;
   border-right: none;
 }
 
-.listItemTopMenu:first-child {
+.activeListItem {
   padding-top: 6px;
   background-color: #eee;
   border-top: 2px solid #0073cf;

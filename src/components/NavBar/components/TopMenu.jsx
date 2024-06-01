@@ -1,4 +1,5 @@
 import styles from "./TopMenu.module.css";
+import { useParams } from "react-router-dom";
 
 const pages = [
   { href: "https://www.turners.co.nz/Cars/", name: "Cars" },
@@ -26,10 +27,16 @@ const pages = [
 ];
 
 export default function TopMenu() {
+  const params = useParams();
   return (
     <ul className={styles.headerTopMenu}>
       {pages.map((page, index) => (
-        <li key={index} className={styles.listItemTopMenu}>
+        <li
+          key={index}
+          className={`${styles.listItemTopMenu} ${
+            params.section === page.name ? styles.activeListItem : ""
+          }`}
+        >
           <a href={page.href} className={styles.topMenuAnchor}>
             {page.name}
           </a>

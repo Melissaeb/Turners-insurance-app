@@ -5,14 +5,14 @@ const buttons = [
     name: "AutoDetect",
     link: "/Cars/finance-insurance/car-insurance/autodetect",
     text: "Upload a photo of a vehicle, and our cutting-edge technology will analyse it for you. Receive personalized insurance quotes based on similar vehicles in our database.",
-    icon: "/src/assets/search.svg",
+    icon: "/search.svg",
     alt: "search icon",
   },
   {
     name: "Quick Quote",
     link: "/Cars/finance-insurance/car-insurance/quick-quote",
     text: "Get instant insurance quotes tailored to your car details and crash history. Quick Quote simplifies the process, delivering competitive rates in seconds.",
-    icon: "/src/assets/dollar.svg",
+    icon: "/dollar.svg",
     alt: "dollar icon",
   },
 ];

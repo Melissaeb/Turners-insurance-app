@@ -4,7 +4,7 @@ const buttons = [
   {
     name: "AutoDetect",
     link: "/Cars/finance-insurance/car-insurance/autodetect",
-    text: "Upload a photo of a vehicle, and our cutting-edge technology will analyse it for you. Receive personalized insurance quotes based on similar vehicles in our database.",
+    text: "Upload a photo of a vehicle, and our cutting-edge technology will analyse it for you. Receive personalised insurance quotes based on similar vehicles in our database.",
     icon: "/search.svg",
     alt: "search icon",
   },

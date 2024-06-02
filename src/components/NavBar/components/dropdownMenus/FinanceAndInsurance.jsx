@@ -21,6 +21,10 @@ const pages = [
     href: "/Cars/finance-insurance/car-insurance/autodetect",
     name: "AutoDetect",
   },
+  {
+    href: "/Cars/finance-insurance/car-insurance/quick-quote",
+    name: "Quick Quote",
+  },
 ];
 
 export default function FinanceAndInsurance() {

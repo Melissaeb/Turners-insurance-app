@@ -104,6 +104,29 @@ export default function VehicleRecognition() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
+        <ul className={styles.breadcrumbs}>
+          <li className={styles.breadcrumbsItem}>
+            <a className={styles.breadcrumbLink} href="/">
+              Home
+            </a>
+            &raquo;
+          </li>
+          <li className={styles.breadcrumbsItem}>
+            <a className={styles.breadcrumbLink} href="/">
+              Car Insurance
+            </a>
+            &raquo;
+          </li>
+          <li className={styles.breadcrumbsItem}>
+            <a
+              className={styles.breadcrumbLink}
+              href="/Cars/finance-insurance/car-insurance/autodetect/"
+            >
+              AutoDetect
+            </a>
+          </li>
+        </ul>
+
         <div className={styles.writing}>
           <div className={styles.titles}>
             <h1 className={styles.title}>AutoDetect</h1>

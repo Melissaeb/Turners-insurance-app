@@ -4,9 +4,26 @@
 }
 
 .content {
+  position: relative;
   flex: 0 1 1200px;
   display: flex;
-  margin: 50px 50px 70px 70px;
+  margin: 70px 50px 70px 70px;
+}
+
+.breadcrumbs {
+  position: absolute;
+  top: -50px;
+  left: -30px;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.breadcrumbLink {
+  color: #0073cf;
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 10px;
 }
 
 .title {
@@ -74,12 +91,19 @@
 @media screen and (max-width: 1070px) {
   .container {
     flex: 0 1 700px;
+    position: relative;
   }
 
   .content {
     flex-flow: column;
     margin: 0;
-    padding: 40px 50px 50px;
+    padding: 70px 50px 50px;
+    position: static;
+  }
+
+  .breadcrumbs {
+    top: 15px;
+    left: 0;
   }
 
   .description {
@@ -107,6 +131,10 @@
 @media screen and (max-width: 768px) {
   .container {
     max-width: 100vw;
+  }
+
+  .breadcrumbs {
+    margin-left: 20px;
   }
 
   .vehicleImage {

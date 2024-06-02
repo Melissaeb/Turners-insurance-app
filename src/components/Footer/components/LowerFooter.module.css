@@ -62,7 +62,7 @@
   transition: 0.8s;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 840px) {
   .lowerFooter {
     padding: 20px;
     border-top: 5px solid #9a9b9c;

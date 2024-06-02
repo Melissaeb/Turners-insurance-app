@@ -67,14 +67,57 @@
 .vehicleImage {
   min-width: 580px;
   max-width: 580px;
-  /* height: 300px;
-  object-fit: cover; */
   padding: 0 20px 0 30px;
   align-self: flex-start;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1070px) {
+  .container {
+    flex: 0 1 700px;
+  }
+
   .content {
     flex-flow: column;
+    margin: 0;
+    padding: 40px 50px 50px;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  .vehicleImage {
+    margin-top: 40px;
+    min-width: 80%;
+    max-width: 80%;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100vw;
+  }
+
+  .vehicleImage {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .description {
+    font-size: 14px;
   }
 }

@@ -2,6 +2,7 @@ import "./App.css";
 import VehicleRecognition from "./components/VehicleRecognition/VehicleRecognition";
 import { Routes, Route, Navigate } from "react-router-dom";
 import CarInsurance from "./components/CarInsurance/CarInsurance";
+import QuickQuote from "./components/QuickQuote/QuickQuote";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           element={<CarInsurance />}
         >
           <Route path="autodetect" element={<VehicleRecognition />} />
+          <Route path="quick-quote" element={<QuickQuote />} />
         </Route>
       </Routes>
     </div>
